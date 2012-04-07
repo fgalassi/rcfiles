@@ -1,0 +1,222 @@
+" An example for a vimrc file.
+"
+" Maintainer:	Bram Moolenaar <Bram@vim.org>
+" Last change:	2008 Jul 02
+"
+" To use it, copy it to
+"     for Unix and OS/2:  ~/.vimrc
+"	      for Amiga:  s:.vimrc
+"  for MS-DOS and Win32:  $VIM\_vimrc
+"	    for OpenVMS:  sys$login:.vimrc
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file
+endif
+set history=50		" keep 50 lines of command line history
+set ruler		" show the cursor position all the time
+set showcmd		" display incomplete commands
+set incsearch		" do incremental searching
+
+" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
+" let &guioptions = substitute(&guioptions, "t", "", "g")
+
+" Don't use Ex mode, use Q for formatting
+map Q gq
+
+" CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
+" so that you can undo CTRL-U after inserting a line break.
+inoremap <C-U> <C-G>u<C-U>
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+if has('mouse')
+  set mouse=a
+endif
+
+" Switch syntax highlighting on, when the terminal has colors
+" Also switch on highlighting the last used search pattern.
+if &t_Co > 2 || has("gui_running")
+  syntax on
+  set hlsearch
+endif
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " For all text files set 'textwidth' to 78 characters.
+  autocmd FileType text setlocal textwidth=78
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  " Also don't do it when the mark is in the first line, that is the default
+  " position when opening a file.
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+  augroup END
+
+else
+
+  set autoindent		" always set autoindenting on
+
+endif " has("autocmd")
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
+
+" My config
+"
+"
+" no sound bell, flash screen
+set visualbell
+" search case insensitive
+set ignorecase
+" search case insensitive unless first char is upper case
+set smartcase 
+" indent automatically 
+set autoindent
+" show line numbers
+set number
+" no word wrap
+set nowrap 
+" map leader
+let mapleader=","
+
+" backup
+" Save your backups to a less annoying place than the current directory.
+" If you have .vim-backup in the current directory, it'll use that.
+" Otherwise it saves it to ~/.vim/tmp/backup or . if all else fails.
+if isdirectory($HOME . '/.vim/tmp/backup') == 0
+  :silent !mkdir -p ~/.vim/tmp/backup >/dev/null 2>&1
+endif
+set backupdir=./.vim-backup/,~/.vim/tmp/backup/,.
+set backup
+
+" swap
+" Save your swp files to a less annoying place than the current directory.
+" If you have .vim-swap in the current directory, it'll use that.
+" Otherwise it saves it to ~/.vim/tmp/swap, ~/tmp or .
+if isdirectory($HOME . '/.vim/tmp/swap') == 0
+  :silent !mkdir -p ~/.vim/tmp/swap >/dev/null 2>&1
+endif
+set directory=./.vim-swap//,~/.vim/tmp/swap//,~/tmp//,.
+set swapfile
+
+" persistent undo
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/tmp/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/tmp/undo') == 0
+    :silent !mkdir -p ~/.vim/tmp/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//,~/.vim/tmp/undo//
+  set undofile
+endif
+
+" text settings
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set textwidth=80
+
+autocmd Filetype html setlocal ts=4 sts=4 sw=4
+autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+autocmd Filetype scheme setlocal ts=2 sts=2 sw=2
+
+"
+" esc removes highlight
+nnoremap <silent> <esc> :nohlsearch<cr>
+"nnoremap <silent> <esc> :nohl<cr><esc>
+" simple ad blank line (next)
+noremap <leader>o o<esc>k
+" simple add blank line (prev)
+noremap <leader>O O<esc>j
+
+"
+" My gui config
+"
+if has("gui_running")
+  set guifont=Consolas\ 11
+  set guioptions-=m
+  set guioptions-=T
+  set guioptions-=r
+endif
+
+" fix terminal problems?
+if !has("gui_running")
+  set t_RV=
+  set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
+endif
+
+" vundle
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'matchit.zip'
+Bundle 'surround.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'tpope/vim-fugitive'
+Bundle 'kien/ctrlp.vim'
+Bundle "SirVer/ultisnips"
+Bundle 'scrooloose/syntastic'
+Bundle 'Tabular'
+Bundle 'mileszs/ack.vim'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'godlygeek/csapprox'
+
+" javascript
+Bundle 'pangloss/vim-javascript'
+" ruby
+Bundle 'ruby.vim'
+Bundle 'ecomba/vim-ruby-refactoring'
+" php
+Bundle 'php.vim'
+Bundle 'PDV--phpDocumentor-for-Vim'
+Bundle 'phpcomplete.vim'
+
+" color schemes
+Bundle 'tomasr/molokai'
+
+filetype plugin on
+
+" color schemes
+" Use molokai and digerati as fallback
+colorscheme digerati
+silent! colorscheme molokai

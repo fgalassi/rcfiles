@@ -1,0 +1,22 @@
+snippet cmd "Commander command" !b
+command :${1:name} do |c|
+  c.syntax = "${2:syntax}"
+  c.description = "${3:description}"
+  c.when_called do |args, options|
+    $4
+  end
+end
+endsnippet
+
+snippet prog "Commander program" !b
+require "commander/import"
+
+program :name,        "${1:name}"
+program :description, "${2:description}"
+program :version,     "${3:version}"
+endsnippet
+
+snippet opt "Commander command option" !b
+c.option "--${1:prefix WHAT}", ${2:Type}, "${3:Description}"
+endsnippet
+
