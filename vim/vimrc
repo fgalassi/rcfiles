@@ -220,3 +220,6 @@ filetype plugin on
 " Use molokai and digerati as fallback
 colorscheme digerati
 silent! colorscheme molokai
+
+" plugins
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.work$\|.keep$'
