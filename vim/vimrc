@@ -170,7 +170,7 @@ noremap <leader>O O<esc>j
 " My gui config
 "
 if has("gui_running")
-  set guifont=Consolas\ 11
+  set guifont=Consolas\ 12
   set guioptions-=m
   set guioptions-=T
   set guioptions-=r
