@@ -170,7 +170,11 @@ noremap <leader>O O<esc>j
 " My gui config
 "
 if has("gui_running")
-  set guifont=Consolas\ 12
+  if has("gui_macvim")
+      set guifont=Consolas:h16
+  else
+      set guifont=Consolas\ 12
+  endif
   set guioptions-=m
   set guioptions-=T
   set guioptions-=r
