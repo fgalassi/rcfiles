@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+ln -sfT rcfiles/git/gitconfig ~/.gitconfig
+
 # go to git repository root directory
 cd $(git rev-parse --show-toplevel)
 

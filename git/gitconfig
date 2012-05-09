@@ -1,0 +1,20 @@
+[user]
+	name = Federico Galassi
+	email = federico.galassi@gmail.com
+[core]
+	editor = vim
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	see = log --graph --pretty=oneline --decorate=full --all
+[heroku]
+	account = federico.galassi@gmail.com
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
