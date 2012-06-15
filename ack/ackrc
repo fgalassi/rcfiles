@@ -1,1 +1,4 @@
 --ignore-dir=.work
+--type-set=haml=.haml
+--type-set=sass=.sass
+--type-set=coffee=.coffee

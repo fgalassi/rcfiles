@@ -214,6 +214,8 @@ Bundle 'ecomba/vim-ruby-refactoring'
 Bundle 'php.vim'
 Bundle 'PDV--phpDocumentor-for-Vim'
 Bundle 'phpcomplete.vim'
+" haml
+Bundle 'tpope/vim-haml'
 
 " color schemes
 Bundle 'tomasr/molokai'
