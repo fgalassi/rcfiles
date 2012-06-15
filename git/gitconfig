@@ -13,7 +13,7 @@
 	ci = commit
 	see = log --graph --pretty=oneline --decorate=full --all
 [heroku]
-	account = federico.galassi@gmail.com
+	account = federico.galassi.gmail.com
 [merge]
 	tool = vimdiff
 [diff]
