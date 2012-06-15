@@ -26,7 +26,7 @@ if has("vms")
 else
   set backup		" keep a backup file
 endif
-set history=50		" keep 50 lines of command line history
+set history=500		" keep 500 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
@@ -110,6 +110,8 @@ set autoindent
 set number
 " no word wrap
 set nowrap 
+" wildmode
+set wildmode=longest,list
 " map leader
 let mapleader=","
 
