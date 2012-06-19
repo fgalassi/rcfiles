@@ -206,6 +206,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'godlygeek/csapprox'
+Bundle 'thinca/vim-visualstar'
 
 " javascript
 Bundle 'pangloss/vim-javascript'
