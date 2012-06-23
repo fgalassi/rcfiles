@@ -211,7 +211,7 @@ Bundle 'thinca/vim-visualstar'
 " javascript
 Bundle 'pangloss/vim-javascript'
 " ruby
-Bundle 'ruby.vim'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'ecomba/vim-ruby-refactoring'
 " php
 Bundle 'php.vim'
