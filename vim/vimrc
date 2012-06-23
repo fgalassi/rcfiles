@@ -111,7 +111,11 @@ set number
 " no word wrap
 set nowrap 
 " wildmode
-set wildmode=longest,list
+set wildmode=list:longest,full
+" faster esc in visual/insert mode
+set ttimeout
+set ttimeoutlen=10
+" noesckeys <= NO, cursor don't work in insert mode
 " map leader
 let mapleader=","
 
@@ -228,7 +232,7 @@ Bundle 'tpope/vim-haml'
 " color schemes
 Bundle 'tomasr/molokai'
 
-filetype plugin on
+filetype plugin indent on
 
 " color schemes
 " Use molokai and digerati as fallback
