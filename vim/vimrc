@@ -28,6 +28,9 @@ set wildmode=list:longest,full
 " faster esc in visual/insert mode
 set ttimeout
 set ttimeoutlen=10
+" longer mapping waiting time
+set timeout
+set timeoutlen=3000
 " noesckeys <= NO, cursor don't work in insert mode
 " text settings
 set expandtab
@@ -36,6 +39,9 @@ set shiftwidth=4
 set textwidth=80
 " map leader
 let mapleader=","
+" enable syntax
+syntax on
+
 
 " backup
 " Save your backups to a less annoying place than the current directory.
@@ -155,8 +161,6 @@ filetype plugin indent on
 colorscheme digerati
 silent! colorscheme molokai
 
-" enable syntax
-syntax on
-
 " plugins
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.work$\|.keep$'
+
