@@ -139,8 +139,15 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'godlygeek/csapprox'
 Bundle 'thinca/vim-visualstar'
 
+" text objects
+Bundle 'kana/vim-textobj-user'
+Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'vim-scripts/argtextobj.vim'
+
 " javascript
 Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
 " ruby
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'ecomba/vim-ruby-refactoring'
