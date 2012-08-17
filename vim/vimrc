@@ -95,9 +95,9 @@ noremap <leader>o o<esc>k
 noremap <leader>O O<esc>j
 " vimrc
 noremap <Leader>vco :split $MYVIMRC<Cr>
-noremap <Leader>vcc :w <Bar> so % <Bar> q<Cr>
+noremap <Leader>vcc :w <Bar> source % <Bar> q<Cr>
 noremap <Leader>vce :e $MYVIMRC<Cr>
-noremap <Leader>vcs :so $MYVIMRC<Cr>
+noremap <Leader>vcs :w <Bar> source $MYVIMRC<Cr>
 
 "
 " My gui config
