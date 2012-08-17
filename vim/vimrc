@@ -7,6 +7,8 @@ set history=500
 set ruler
 " display incomplete commands
 set showcmd
+" always show status line
+set laststatus=2
 " do incremental searching
 set incsearch
 " no sound bell, flash screen
