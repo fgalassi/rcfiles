@@ -112,7 +112,7 @@ function git_prompt() {
         git_prompt=${git_prompt//\+/${GREEN}A${COLOR_NONE}}
         git_prompt=${git_prompt//\*/${RED}M${COLOR_NONE}}
         git_prompt=${git_prompt//%/${RED}?${COLOR_NONE}}
-        git_prompt=${git_prompt//<>/${YELLOW}⇅${COLOR_NONE}}
+        git_prompt=${git_prompt//<>/${YELLOW}↕${COLOR_NONE}}
         git_prompt=${git_prompt//>/${YELLOW}↑${COLOR_NONE}}
         git_prompt=${git_prompt//</${YELLOW}↓${COLOR_NONE}}
         git_prompt=${git_prompt//\$/${CYAN}S${COLOR_NONE}}
