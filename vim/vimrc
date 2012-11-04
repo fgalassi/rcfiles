@@ -140,6 +140,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'godlygeek/csapprox'
 Bundle 'thinca/vim-visualstar'
+Bundle 'MarcWeber/vim-addon-local-vimrc'
 
 " text objects
 Bundle 'kana/vim-textobj-user'
