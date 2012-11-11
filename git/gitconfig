@@ -12,6 +12,17 @@
 	co = checkout
 	ci = commit
 	see = log --graph --pretty=oneline --decorate=full --all
+	st = status
+	lg = log
+	br = branch
+	lg = log
+	re = remote
+    rev = remote --verbose
+	bra = branch --all
+	lgs = log --stat
+	lgp = log --patch
+	df = diff
+	dfs = diff --staged
 [heroku]
 	account = federico.galassi.gmail.com
 [merge]
