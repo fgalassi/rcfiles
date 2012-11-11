@@ -137,9 +137,9 @@ Bundle "SirVer/ultisnips"
 Bundle 'scrooloose/syntastic'
 Bundle 'Tabular'
 Bundle 'mileszs/ack.vim'
+Bundle 'godlygeek/csapprox'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
-Bundle 'godlygeek/csapprox'
 Bundle 'thinca/vim-visualstar'
 Bundle 'MarcWeber/vim-addon-local-vimrc'
 
