@@ -89,9 +89,8 @@ endif
 
 " mappings
 "
-" esc removes highlight
-nnoremap <silent> <esc> :nohlsearch<cr>
-"nnoremap <silent> <esc> :nohl<cr><esc>
+" <C-L> removes highlight
+noremap <silent> <C-L> :nohlsearch<cr><C-L>
 " simple ad blank line (next)
 noremap <leader>o o<esc>k
 " simple add blank line (prev)
