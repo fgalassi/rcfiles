@@ -5,6 +5,7 @@ My linux configuration files.
 * nvm
 * ack
 * bash
+* fonts
 
 ## Install
 ```bash
