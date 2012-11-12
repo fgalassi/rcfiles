@@ -23,6 +23,9 @@
 	lgp = log --patch
 	df = diff
 	dfs = diff --staged
+	coa = commit --amend
+	topush = log origin..HEAD
+	topull = log HEAD..origin
 [heroku]
 	account = federico.galassi.gmail.com
 [merge]
