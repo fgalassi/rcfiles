@@ -165,15 +165,11 @@ Bundle 'tpope/vim-haml'
 " jade
 Bundle 'digitaltoad/vim-jade'
 
-" color schemes
-Bundle 'tomasr/molokai'
-
 filetype plugin indent on
 
 " color schemes
-" Use molokai and digerati as fallback
-colorscheme digerati
-silent! colorscheme molokai
+" colorscheme digerati
+colorscheme molokai
 
 " plugins
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.work$\|.keep$'
