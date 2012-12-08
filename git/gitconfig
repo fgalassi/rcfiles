@@ -9,23 +9,22 @@
 	branch = auto
 	ui = auto
 [alias]
-	co = checkout
-	ci = commit
-	see = log --graph --pretty=oneline --decorate=full --all
-	st = status
-	lg = log
 	br = branch
-	lg = log
-	re = remote
-    rev = remote --verbose
 	bra = branch --all
-	lgs = log --stat
-	lgp = log --patch
+	ci = commit
+	cia = commit --amend
+	co = checkout
+	cob = checkout -b
 	df = diff
 	dfs = diff --staged
-	coa = commit --amend
-	topush = log origin..HEAD
-	topull = log HEAD..origin
+	lg = log
+	lgp = log --patch
+	lgs = log --stat
+	re = remote
+	rev = remote --verbose
+	see = log --graph --pretty=oneline --decorate=full --all --abbrev-commit
+	sh = stash
+	st = status
 [heroku]
 	account = federico.galassi.gmail.com
 [merge]
