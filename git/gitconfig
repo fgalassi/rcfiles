@@ -22,7 +22,7 @@
 	lgs = log --stat
 	re = remote
 	rev = remote --verbose
-	see = log --graph --pretty=oneline --decorate=full --all --abbrev-commit
+	see = log --graph --oneline --decorate --all --abbrev-commit
 	sh = stash
 	st = status
 [heroku]
