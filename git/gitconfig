@@ -32,4 +32,6 @@
 [diff]
 	tool = vimdiff
 [push]
-	default = simple
+	default = upstream
+[github]
+	user = fgalassi
