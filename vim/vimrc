@@ -42,7 +42,7 @@ set textwidth=80
 " highlight current line
 set cursorline
 " map leader
-let mapleader=","
+let mapleader=','
 " enable syntax
 syntax on
 
@@ -68,7 +68,7 @@ set directory=./.vim-swap//,~/.vim/tmp/swap//,~/tmp//,.
 set swapfile
 
 " persistent undo
-if exists("+undofile")
+if exists('+undofile')
   " undofile - This allows you to use undos after exiting and restarting
   " This, like swap and backups, uses .vim-undo first, then ~/.vim/tmp/undo
   " :help undo-persistence
@@ -81,7 +81,7 @@ if exists("+undofile")
 endif
 
 " autocommands
-if has("autocmd")
+if has('autocmd')
     autocmd Filetype html setlocal ts=4 sts=4 sw=4
     autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
     autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
@@ -106,8 +106,8 @@ noremap <Leader>vcs :w <Bar> source $MYVIMRC<Cr>
 "
 " My gui config
 "
-if has("gui_running")
-  if has("gui_macvim")
+if has('gui_running')
+  if has('gui_macvim')
       set guifont=Consolas:h16
   else
       set guifont=Consolas\ 12
@@ -118,7 +118,7 @@ if has("gui_running")
 endif
 
 " fix terminal problems?
-if !has("gui_running")
+if !has('gui_running')
   set t_RV=
   set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 endif
@@ -134,7 +134,7 @@ Bundle 'surround.vim'
 Bundle 'The-NERD-Commenter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'kien/ctrlp.vim'
-Bundle "SirVer/ultisnips"
+Bundle 'SirVer/ultisnips'
 Bundle 'scrooloose/syntastic'
 Bundle 'Tabular'
 Bundle 'mileszs/ack.vim'
