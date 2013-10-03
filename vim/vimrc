@@ -164,6 +164,11 @@ Bundle 'phpcomplete.vim'
 Bundle 'tpope/vim-haml'
 " jade
 Bundle 'digitaltoad/vim-jade'
+" stylus
+Bundle 'wavded/vim-stylus'
+" markdown
+"Bundle 'suan/vim-instant-markdown'
+Bundle 'tpope/vim-markdown'
 
 filetype plugin indent on
 
