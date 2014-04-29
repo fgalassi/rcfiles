@@ -1,0 +1,150 @@
+# vim: ft=sh:sw=2:ts=2
+function bash_aliases_find() {
+  local terms="$@"
+  grep "^\s*alias.*${terms// /.*}" ~/.bash_aliases | sort | cut -d" " -f2
+}
+
+function bash_aliases_edit() {
+  vim ~/.bash_aliases
+}
+
+function bash_aliases_source() {
+  source ~/.bash_aliases
+}
+
+function bash_aliases_edit_source() {
+  bash_aliases_edit
+  bash_aliases_source
+}
+
+
+function git_add() {
+  git add "$@"
+}
+
+function git_files_modified_edit() {
+  vim $(git diff --name-only)
+}
+
+function git_branch() {
+  git branch "$@"
+}
+
+function git_branch_all {
+  git branch --all "$@"
+}
+
+function git_commit {
+  git commit "$@"
+}
+
+function git_commit_amend {
+  git commit --amend "$@"
+}
+
+function git_commit_message {
+  git commit --message "$@"
+}
+
+function git_checkout {
+  git checkout "$@"
+}
+
+function git_checkout_branch {
+  git checkout -b "$@"
+}
+
+function git_checkout_master {
+  git checkout master
+}
+
+function git_diff {
+  git diff "$@"
+}
+
+function git_diff_staged {
+  git diff --staged "$@"
+}
+
+function git_log {
+  git log "$@"
+}
+
+function git_log_new_here {
+  git log master..HEAD
+}
+
+function git_log_patch {
+  git log --patch "$@"
+}
+
+function git_log_stat {
+  git log --stat "$@"
+}
+
+function git_remote {
+  git remote "$@"
+}
+
+function git_remote_verbose {
+  git remote --verbose "$@"
+}
+
+function git_see {
+  git log --graph --oneline --decorate --all --abbrev-commit "$@"
+}
+
+function git_stash {
+  git stash "$@"
+}
+
+function git_status {
+  git status "$@"
+}
+
+function git_push_u_origin_head {
+  git push -u origin HEAD
+}
+
+function git_pullall {
+  git pull "$@" && git submodule update --init --recursive;
+}
+
+function git_cherry_pick {
+  git cherry-pick "$@"
+}
+
+function git_submodule_update {
+  git submodule update
+}
+
+alias a=bash_aliases_find
+alias bae=bash_aliases_edit
+alias baes=bash_aliases_edit_source
+alias bas=bash_aliases_source
+alias ga=git_add
+alias gb=git_branch
+alias gba=git_branch_all
+alias gci=git_commit
+alias gcia=git_commit_amend
+alias gcim=git_commit_message
+alias gco=git_checkout
+alias gcob=git_checkout_branch
+alias gcom=git_checkout_master
+alias gcp=git_cherry_pick
+alias gd=git_diff
+alias gdnh=git_diff_new_here
+alias gds=git_diff_staged
+alias gl=git_log
+alias glnh=git_log_new_here
+alias glp=git_log_patch
+alias gls=git_log_stat
+alias gme=git_files_modified_edit
+alias gpoh=git_push_u_origin_head
+alias gpla=git_pullall
+alias gr=git_remote
+alias grv=git_remote_verbose
+alias gs=git_status
+alias gsee=git_see
+alias gsh=git_stash
+alias gsu=git_submodule_update
