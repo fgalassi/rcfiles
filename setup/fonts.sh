@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-SETUP_DIR="$( pwd -P )"
-
-mkdir -p ~/.fonts
-cp $SETUP_DIR/fonts/* ~/.fonts
+RC_DIR="$( cd "$( dirname "$0" )/.." && pwd )"
+cd $HOME
+mkdir -p .fonts
+cp "$RC_DIR"/fonts/* .fonts
 fc-cache ~/.fonts
