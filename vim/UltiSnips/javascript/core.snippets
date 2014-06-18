@@ -4,3 +4,15 @@ function($1) {
 	${VISUAL}$2
 }$0
 endsnippet
+
+snippet fun "named function" w
+function ${1:name}($2) {
+	${VISUAL}$3
+}$0
+endsnippet
+
+snippet pfun "prototype function" w
+${1:Object}.prototype.${2:name} = function ($3) {
+	${VISUAL}$4
+}$0
+endsnippet

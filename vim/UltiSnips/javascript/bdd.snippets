@@ -1,0 +1,23 @@
+snippet de "describe" w
+describe("${1:what}", function() {
+  $2
+})
+endsnippet
+
+snippet it "it" w
+it("${1:should} $2", function() {
+  $3
+})
+endsnippet
+
+snippet be "before each" w
+beforeEach(function() {
+  $1
+})
+endsnippet
+
+snippet ae "after each" w
+afterEach(function() {
+  $1
+})
+endsnippet
