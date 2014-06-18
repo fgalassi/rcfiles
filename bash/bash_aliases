@@ -118,6 +118,14 @@ function git_submodule_update {
   git submodule update
 }
 
+function tmux_config_edit {
+  vim ~/.tmux.conf
+}
+
+function vim_config_edit {
+  vim ~/.vimrc
+}
+
 alias a=bash_aliases_find
 alias bae=bash_aliases_edit
 alias baes=bash_aliases_edit_source
@@ -148,3 +156,5 @@ alias gs=git_status
 alias gsee=git_see
 alias gsh=git_stash
 alias gsu=git_submodule_update
+alias tce=tmux_config_edit
+alias vce=vim_config_edit
