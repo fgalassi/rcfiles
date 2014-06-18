@@ -2,12 +2,18 @@ My linux configuration files.
 
 * git
 * vim
-* nvm
 * ack
-* bash
+* bash (with nvm)
 * fonts
 
 ## Install
 ```bash
-$ setup/all.sh
+$ <rcfiles repo>/setup/all.sh
+# or
+$ <rcfiles repo>/setup/git.sh
+$ <rcfiles repo>/setup/vim.sh
+$ <rcfiles repo>/setup/ack.sh
+$ <rcfiles repo>/setup/fonts.sh
 ```
+
+Bash has no automatic setup
