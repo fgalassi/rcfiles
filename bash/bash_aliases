@@ -34,6 +34,10 @@ function git_branch_all {
   git branch --all "$@"
 }
 
+function git_branch_delete_merged {
+    git branch --merged | grep -v '* ' | xargs -r -n 1 git branch -d
+}
+
 function git_commit {
   git commit "$@"
 }
@@ -110,6 +114,10 @@ function git_pullall {
   git pull "$@" && git submodule update --init --recursive;
 }
 
+function git_pull_rebase {
+  git pull --rebase "$@" && git submodule update --init --recursive;
+}
+
 function git_cherry_pick {
   git cherry-pick "$@"
 }
@@ -133,6 +141,7 @@ alias bas=bash_aliases_source
 alias ga=git_add
 alias gb=git_branch
 alias gba=git_branch_all
+alias gbdm=git_branch_delete_merged
 alias gci=git_commit
 alias gcia=git_commit_amend
 alias gcim=git_commit_message
@@ -150,6 +159,7 @@ alias gls=git_log_stat
 alias gme=git_files_modified_edit
 alias gpoh=git_push_u_origin_head
 alias gpla=git_pullall
+alias gplb=git_pull_rebase
 alias gr=git_remote
 alias grv=git_remote_verbose
 alias gs=git_status
