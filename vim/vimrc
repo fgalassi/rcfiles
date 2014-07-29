@@ -126,50 +126,51 @@ endif
 " vundle
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
 
-Bundle 'gmarik/vundle'
-Bundle 'matchit.zip'
-Bundle 'surround.vim'
-Bundle 'The-NERD-Commenter'
-Bundle 'tpope/vim-fugitive'
-Bundle 'kien/ctrlp.vim'
-Bundle 'SirVer/ultisnips'
-Bundle 'scrooloose/syntastic'
-Bundle 'Tabular'
-Bundle 'mileszs/ack.vim'
-Bundle 'godlygeek/csapprox'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'thinca/vim-visualstar'
-Bundle 'MarcWeber/vim-addon-local-vimrc'
+Plugin 'gmarik/vundle'
+Plugin 'matchit.zip'
+Plugin 'surround.vim'
+Plugin 'The-NERD-Commenter'
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'SirVer/ultisnips'
+Plugin 'scrooloose/syntastic'
+Plugin 'Tabular'
+Plugin 'mileszs/ack.vim'
+Plugin 'godlygeek/csapprox'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'thinca/vim-visualstar'
+Plugin 'MarcWeber/vim-addon-local-vimrc'
 
 " text objects
-Bundle 'kana/vim-textobj-user'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'vim-scripts/argtextobj.vim'
+Plugin 'kana/vim-textobj-user'
+Plugin 'michaeljsmith/vim-indent-object'
+Plugin 'nelstrom/vim-textobj-rubyblock'
+Plugin 'vim-scripts/argtextobj.vim'
 
 " javascript
-Bundle 'pangloss/vim-javascript'
-Bundle 'kchmck/vim-coffee-script'
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
 " ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'ecomba/vim-ruby-refactoring'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'ecomba/vim-ruby-refactoring'
 " php
-Bundle 'php.vim'
-Bundle 'PDV--phpDocumentor-for-Vim'
-Bundle 'phpcomplete.vim'
+Plugin 'php.vim'
+Plugin 'PDV--phpDocumentor-for-Vim'
+Plugin 'phpcomplete.vim'
 " haml
-Bundle 'tpope/vim-haml'
+Plugin 'tpope/vim-haml'
 " jade
-Bundle 'digitaltoad/vim-jade'
+Plugin 'digitaltoad/vim-jade'
 " stylus
-Bundle 'wavded/vim-stylus'
+Plugin 'wavded/vim-stylus'
 " markdown
-"Bundle 'suan/vim-instant-markdown'
-Bundle 'tpope/vim-markdown'
+"Plugin 'suan/vim-instant-markdown'
+Plugin 'tpope/vim-markdown'
 
+call vundle#end()
 filetype plugin indent on
 
 " color schemes
