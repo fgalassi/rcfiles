@@ -140,7 +140,7 @@ Plugin 'Tabular'
 Plugin 'mileszs/ack.vim'
 Plugin 'godlygeek/csapprox'
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'bling/vim-airline'
 Plugin 'thinca/vim-visualstar'
 Plugin 'MarcWeber/vim-addon-local-vimrc'
 
