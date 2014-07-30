@@ -168,8 +168,7 @@ Plugin 'digitaltoad/vim-jade'
 " stylus
 Plugin 'wavded/vim-stylus'
 " markdown
-"Plugin 'suan/vim-instant-markdown'
-Plugin 'tpope/vim-markdown'
+Plugin 'gabrielelana/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
