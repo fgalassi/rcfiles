@@ -143,6 +143,7 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'bling/vim-airline'
 Plugin 'thinca/vim-visualstar'
 Plugin 'MarcWeber/vim-addon-local-vimrc'
+Plugin 'mihaifm/bufstop'
 
 " text objects
 Plugin 'kana/vim-textobj-user'
@@ -180,4 +181,6 @@ colorscheme molokai
 " plugins
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$\|.work$\|.keep$'
 let g:ctrlp_cmd = 'CtrlPMixed'
+
+map <leader>b :BufstopModeFast<CR>
 
